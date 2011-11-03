@@ -1,3 +1,9 @@
+# revision 20355
+# category Package
+# catalog-ctan /support/installfont
+# catalog-date 2010-09-21 00:48:39 +0200
+# catalog-license lppl
+# catalog-version v1.6
 Name:		texlive-installfont
 Version:	v1.6
 Release:	1
@@ -51,6 +57,7 @@ have a working font installation in your local TeX tree.
 %doc %{_texmfdistdir}/doc/support/installfont/installfont.pdf
 %doc %{_texmfdistdir}/doc/support/installfont/installfont.tex
 %doc %{_texmfdistdir}/doc/support/installfont/manifest.txt
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -65,3 +72,5 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
