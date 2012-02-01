@@ -6,7 +6,7 @@
 # catalog-version v1.6b
 Name:		texlive-installfont
 Version:	v1.6b
-Release:	1
+Release:	2
 Summary:	A bash script for installing a LaTeX font family
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/installfont
@@ -17,7 +17,7 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Requires:	texlive-installfont.bin
+Provides:	texlive-installfont.bin = %{EVRD}
 
 %description
 With this script you can install a LaTeX font family
@@ -40,6 +40,7 @@ have a working font installation in your local TeX tree.
 
 #-----------------------------------------------------------------------
 %files
+%{_bindir}/installfont-tl
 %{_texmfdistdir}/scripts/installfont/installfont-tl
 %doc %{_texmfdistdir}/doc/support/installfont/LICENSE
 %doc %{_texmfdistdir}/doc/support/installfont/README
@@ -55,5 +56,9 @@ have a working font installation in your local TeX tree.
 %build
 
 %install
+mkdir -p %{buildroot}%{_bindir}	 
+pushd %{buildroot}%{_bindir}	 
+    ln -sf %{_texmfdistdir}/scripts/installfont/installfont-tl installfont-tl	 
+popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
