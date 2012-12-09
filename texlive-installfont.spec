@@ -62,3 +62,25 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
+
+
+%changelog
+* Wed Feb 01 2012 Paulo Andrade <pcpa@mandriva.com.br> v1.6b-2
++ Revision: 770348
+- Correct provides of installfont.bin
+
+* Tue Jan 31 2012 Paulo Andrade <pcpa@mandriva.com.br> v1.6b-1
++ Revision: 770187
+- Update to latest upstream package
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> v1.6-2
++ Revision: 752797
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> v1.6-1
++ Revision: 718723
+- texlive-installfont
+- texlive-installfont
+- texlive-installfont
+- texlive-installfont
+
