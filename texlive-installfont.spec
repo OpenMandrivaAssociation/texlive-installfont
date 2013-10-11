@@ -1,12 +1,12 @@
-# revision 25205
+# revision 31205
 # category Package
 # catalog-ctan /support/installfont
-# catalog-date 2012-01-26 12:26:54 +0100
+# catalog-date 2013-07-15 19:52:10 +0200
 # catalog-license lppl
-# catalog-version v1.6b
+# catalog-version v1.7
 Name:		texlive-installfont
-Version:	v1.6b
-Release:	2
+Version:	v1.7
+Release:	1
 Summary:	A bash script for installing a LaTeX font family
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/installfont
@@ -58,29 +58,7 @@ have a working font installation in your local TeX tree.
 %install
 mkdir -p %{buildroot}%{_bindir}	 
 pushd %{buildroot}%{_bindir}	 
-    ln -sf %{_texmfdistdir}/scripts/installfont/installfont-tl installfont-tl	 
+    ln -sf %{_texmfdistdir}/scripts/installfont/installfont-tl installfont-tl
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
-
-
-%changelog
-* Wed Feb 01 2012 Paulo Andrade <pcpa@mandriva.com.br> v1.6b-2
-+ Revision: 770348
-- Correct provides of installfont.bin
-
-* Tue Jan 31 2012 Paulo Andrade <pcpa@mandriva.com.br> v1.6b-1
-+ Revision: 770187
-- Update to latest upstream package
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> v1.6-2
-+ Revision: 752797
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> v1.6-1
-+ Revision: 718723
-- texlive-installfont
-- texlive-installfont
-- texlive-installfont
-- texlive-installfont
-
