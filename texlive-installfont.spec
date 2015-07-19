@@ -6,7 +6,7 @@
 # catalog-version v1.7
 Name:		texlive-installfont
 Version:	v1.7
-Release:	8
+Release:	9
 Summary:	A bash script for installing a LaTeX font family
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/installfont
