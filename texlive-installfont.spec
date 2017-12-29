@@ -1,12 +1,6 @@
-# revision 31205
-# category Package
-# catalog-ctan /support/installfont
-# catalog-date 2013-07-15 19:52:10 +0200
-# catalog-license lppl
-# catalog-version v1.7
 Name:		texlive-installfont
-Version:	v1.7
-Release:	9
+Version:	1.7
+Release:	1
 Summary:	A bash script for installing a LaTeX font family
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/installfont
