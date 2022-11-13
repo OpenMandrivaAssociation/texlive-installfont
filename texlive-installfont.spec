@@ -1,12 +1,12 @@
 Name:		texlive-installfont
-Version:	1.7
-Release:	2
+Version:	31205
+Release:	1
 Summary:	A bash script for installing a LaTeX font family
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/installfont
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/installfont.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/installfont.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/installfont.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/installfont.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +25,12 @@ scheme (e.g. 5bbr8a.pfb). After running the script, you should
 have a working font installation in your local TeX tree.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -45,14 +45,14 @@ have a working font installation in your local TeX tree.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}	 
 pushd %{buildroot}%{_bindir}	 
-    ln -sf %{_texmfdistdir}/scripts/installfont/installfont-tl installfont-tl
+ln -sf %{_texmfdistdir}/scripts/installfont/installfont-tl installfont-tl
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
