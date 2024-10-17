@@ -3,7 +3,7 @@ Version:	31205
 Release:	2
 Summary:	A bash script for installing a LaTeX font family
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/support/installfont
+URL:		https://www.ctan.org/tex-archive/support/installfont
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/installfont.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/installfont.doc.r%{version}.tar.xz
